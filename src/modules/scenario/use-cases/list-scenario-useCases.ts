@@ -10,7 +10,7 @@ export class ListScenarioUseCase {
     private readonly logger:Logger) {}
   async execute(){
     try {
-        const scenario = await this.createScenarioRepository.findMany(data);
+        const scenario = await this.createScenarioRepository.list();
         return scenario;
     } catch (error) {
         this.logger.error('Error creating scenario', error);
