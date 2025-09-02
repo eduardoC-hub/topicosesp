@@ -3,10 +3,11 @@
 
 
 import { Injectable, Logger } from "@nestjs/common";
+import { ListScenarioRepository } from "../repository/list-scenario-repository";
 
 @Injectable()
 export class ListScenarioUseCase {
-    constructor(private readonly createScenarioRepository: ListScenarioUseCase,
+    constructor(private readonly createScenarioRepository: ListScenarioRepository,
     private readonly logger:Logger) {}
   async execute(){
     try {
