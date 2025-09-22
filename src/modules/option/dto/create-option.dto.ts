@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-
-export class CreateScenarioDto {
+export class CreateOptionDto {
     title: string;
     description: string;
-    //options: Option[];
+    name: string;
+    scenarioId: string;
 }
 

@@ -27,7 +27,7 @@ export class ScenarioService {
     return this.findoneScenarioUseCase.execute(id);
   }
 
-  update(id: string,data:UpdateScenarioDto) {
+  update(id: string , data:UpdateScenarioDto) {
     return this.updateScenarioUseCase.execute(id, data);
   }
 
