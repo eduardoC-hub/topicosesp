@@ -2,7 +2,7 @@
 import { Injectable } from '@nestjs/common';
 
 import { CreateOptionUseCase, DeleteOptionUseCase, FindOneoptionUseCase, ListOptionUseCase, UpdateOptionUseCase } from './use-cases';
-import { CreateOptionDto } from './dto/create-Option.dto';
+import { CreateOptionDto } from './dto/create-option.dto';
 import { UpdateOptionDto } from './dto/update-option.dto';
 
 @Injectable()

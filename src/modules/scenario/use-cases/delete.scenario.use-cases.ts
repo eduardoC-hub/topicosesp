@@ -7,11 +7,11 @@ import { DeleteScenarioRepository } from "../repository/delete.scenario.reposito
 
 @Injectable()
 export class DeleteScenarioUseCase {
-    constructor(private readonly createScenarioRepository: DeleteScenarioRepository,
+    constructor(private readonly deleteScenarioRepository: DeleteScenarioRepository,
     private readonly logger:Logger) {}
   async execute(id:string){
     try {
-        const scenario = await this.createScenarioRepository.Delete(id);
+        const scenario = await this.deleteScenarioRepository.Delete(id);
         return scenario;
     } catch (error) {
         this.logger.error('Error creating scenario', error);

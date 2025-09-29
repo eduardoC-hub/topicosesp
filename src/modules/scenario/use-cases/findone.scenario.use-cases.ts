@@ -7,11 +7,11 @@ import { findOneScenarioRepository } from "../repository/findone.scenario.reposi
 
 @Injectable()
 export class findOneScenarioUseCase {
-    constructor(private readonly createScenarioRepository: findOneScenarioRepository,
+    constructor(private readonly findoneScenarioRepository: findOneScenarioRepository,
     private readonly logger:Logger) {}
   async execute(id:string){
     try {
-        const scenario = await this.createScenarioRepository.findOne(id);
+        const scenario = await this.findoneScenarioRepository.findOne(id);
         return scenario;
     } catch (error) {
         this.logger.error('Error creating scenario', error);

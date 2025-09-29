@@ -1,14 +1,14 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "src/shared/databases/prisma.database";
-import { CreateOptionDto } from "../dto/create-option.dto";
+
 
 @Injectable()
-export class CreateOptionRepository {
+export class ListScoreRepository {
 constructor(private readonly prisma: PrismaService) {}   
-async create(data: CreateOptionDto){
-    const option = await this.prisma.option.create({data});
-    return option;
+async list(){
+    const Score = await this.prisma.score.findMany({});
+    return Score;
 }
 
 }

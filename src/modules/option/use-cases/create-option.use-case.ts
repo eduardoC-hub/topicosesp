@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Injectable, Logger } from "@nestjs/common";
-import { CreateOptionRepository } from "../repository/create-option.repository";
-import { CreateOptionDto } from "../dto/create-Option.dto";
+
+import { CreateOptionDto } from "../dto/create-option.dto";
+import { CreateOptionRepository } from "../repository";
 
 @Injectable()
 export class CreateOptionUseCase {
