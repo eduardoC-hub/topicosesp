@@ -1,8 +1,20 @@
 /* eslint-disable prettier/prettier */
-
+import { IsBoolean, IsDate, IsNotEmpty, IsNumber, IsString } from "class-validator";
 export class CreateCriterionDto {
+    @IsString()
+    @IsNotEmpty()
     name: string;
-    weight: number;// 0..1 (soma dos pesos)
+
+    @IsNumber()
+    @IsNotEmpty()
+    weight: number;
+
+    @IsBoolean()
+    @IsNotEmpty()
     active: boolean;
+
+    @IsDate()
+    @IsNotEmpty()
     createdAt: Date;
+    // Scores: Score[];
 }

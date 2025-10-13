@@ -1,7 +1,16 @@
 /* eslint-disable prettier/prettier */
+import { IsNotEmpty, IsString } from "class-validator";
 export class CreateOptionDto {
-    description: string;
+    @IsString()
+    @IsNotEmpty()
     name: string;
-    scenarioId: string;
-}
 
+    @IsString()
+    @IsNotEmpty()
+    description: string;
+
+    @IsString()
+    @IsNotEmpty()
+    scenarioId: string;
+    // Scores: Score[]
+}
